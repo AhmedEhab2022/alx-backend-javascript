@@ -3,8 +3,8 @@ import uploadPhoto from './5-photo-reject';
 
 export default function handleProfileSignup(firstName, lastName, filename) {
   return Promise.allSettled([
-    uploadPhoto(filename),
     signUpUser(firstName, lastName),
+    uploadPhoto(filename),
   ])
     .then((values) => {
       const arr = [];
@@ -18,6 +18,6 @@ export default function handleProfileSignup(firstName, lastName, filename) {
           });
         }
       });
+      return arr;
     })
-    .catch((error) => console.log(error.message));
 }
