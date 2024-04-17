@@ -5,21 +5,21 @@ interface Student {
   location: string;
 }
 
-let student1: Student = {
+const student1: Student = {
   firstName: "Ahmed",
   lastName: "Ehab",
   age: 20,
   location: "Cairo",
 };
 
-let student2: Student = {
+const student2: Student = {
   firstName: "Mazen",
   lastName: "Ramadan",
   age: 13,
   location: "Cairo",
 };
 
-let studentsList: Student[] = [student1, student2];
+const studentsList: Student[] = [student1, student2];
 
 let table = document.createElement("table");
 
