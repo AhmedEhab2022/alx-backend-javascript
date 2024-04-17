@@ -32,5 +32,16 @@ function createEmployee(salary) {
     }
     return new Director;
 }
-var teacher = createEmployee(500);
-console.log(teacher.workFromHome());
+function isDirector(employee) {
+    return employee instanceof Director;
+}
+function executeWork(employee) {
+    if (isDirector(employee)) {
+        console.log(employee.workDirectorTasks());
+    }
+    else {
+        console.log(employee.workTeacherTasks());
+    }
+}
+executeWork(createEmployee(200));
+executeWork(createEmployee(1000));
