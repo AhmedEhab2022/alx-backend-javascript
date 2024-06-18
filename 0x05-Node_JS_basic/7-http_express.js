@@ -8,9 +8,9 @@ app.get('/', (req, res) => {
 });
 
 app.get('/students', (req, res) => {
+  res.write('This is the list of our students\n');
   countStudents(process.argv[2])
     .then((data) => {
-      res.write('This is the list of our students\n');
       res.write(`Number of students: ${data[0]}\n`);
       res.write(`Number of students in CS: ${data[1].length}. List: ${data[1].join(', ')}\n`);
       res.write(`Number of students in SWE: ${data[2].length}. List: ${data[2].join(', ')}`);
