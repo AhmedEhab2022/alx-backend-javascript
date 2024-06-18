@@ -13,6 +13,7 @@ process.stdin.on('readable', () => {
 process.on('exit', () => {
   if (process.stdin.isTTY) {
     process.stdin.end();
+    return;
   }
   process.stdout.write('This important software is now closing\n');
 });
