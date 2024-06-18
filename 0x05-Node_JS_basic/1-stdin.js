@@ -6,11 +6,13 @@ process.stdin.on('readable', () => {
   const name = process.stdin.read();
   if (name !== null) {
     process.stdout.write(`Your name is: ${name}\n`);
+    process.exit();
   }
 });
 
 process.on('exit', () => {
-  if (process.stdin.isTTY) {
+  // if echo "john" | node 1-stdin.js
+  if (process.stdin.isTTY === false) {
     process.stdout.write('This important software is now closing\n');
   }
 });
