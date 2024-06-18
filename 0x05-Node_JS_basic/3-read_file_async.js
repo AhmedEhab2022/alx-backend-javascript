@@ -26,7 +26,7 @@ function countStudents(databasePath) {
       });
       console.log(`Number of students in CS: ${listOfCsFirstnames.length}. List: ${listOfCsFirstnames.join(', ')}`);
       console.log(`Number of students in SWE: ${listOfSweFirstnames.length}. List: ${listOfSweFirstnames.join(', ')}`);
-      resolve();
+      resolve([students.length, listOfCsFirstnames, listOfSweFirstnames]);
     });
   });
 }
