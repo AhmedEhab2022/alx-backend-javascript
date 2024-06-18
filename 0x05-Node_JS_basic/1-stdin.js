@@ -11,8 +11,5 @@ process.stdin.on('readable', () => {
 });
 
 process.on('exit', () => {
-  // if echo "john" | node 1-stdin.js
-  if (process.stdin.isTTY === false) {
-    process.stdout.write('This important software is now closing\n');
-  }
+  process.stdout.write('This important software is now closing\n');
 });
