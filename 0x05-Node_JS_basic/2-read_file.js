@@ -8,7 +8,11 @@ function countStudents(databasePath) {
     const listOfCsFirstnames = [];
     const listOfSweFirstnames = [];
     const students = data.split('\r\n').slice(1);
-    students.splice(students.indexOf(''));
+    for (let i = students.length - 1; i >= 0; i -= 1) {
+      if (students[i] === '') {
+        students.splice(i, 1);
+      }
+    }
     console.log(`Number of students: ${students.length}`);
     students.forEach((student) => {
       const studentArray = student.split(',');
