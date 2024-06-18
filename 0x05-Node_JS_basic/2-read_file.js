@@ -20,8 +20,16 @@ function countStudents(databasePath) {
         numOfSweStudents += 1;
       }
     });
-    console.log(`Number of students in CS: ${numOfCsStudents}. List: ${listOfCsFirstnames.join(', ')}`);
-    console.log(`Number of students in SWE: ${numOfSweStudents}. List: ${listOfSweFirstnames.join(', ')}`);
+    let listStr1 = ` List: ${listOfCsFirstnames.join(', ')}`;
+    let listStr2 = ` List: ${listOfSweFirstnames.join(', ')}`;
+    if (listOfCsFirstnames.length === 0) {
+      listStr1 = '';
+    }
+    if (listOfSweFirstnames.length === 0) {
+      listStr2 = '';
+    }
+    console.log(`Number of students in CS: ${numOfCsStudents}.${listStr1}`);
+    console.log(`Number of students in SWE: ${numOfSweStudents}.${listStr2}`);
   } else {
     throw new Error('Cannot load the database');
   }
