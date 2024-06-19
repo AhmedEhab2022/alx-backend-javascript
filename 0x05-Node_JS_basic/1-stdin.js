@@ -6,7 +6,7 @@ process.stdin.on('readable', () => {
   const name = process.stdin.read();
   if (name !== null) {
     process.stdout.write(`Your name is: ${name.trim()}\n`);
-    process.exit();
+    process.exit(0);
   }
 });
 
