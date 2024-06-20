@@ -25,7 +25,7 @@ describe('sendPaymentRequestToApi', () => {
 
   it('should log the total 2', () => {
     sendPaymentRequestToApi(10, 10);
-    expect(consoleSpy.calledOnceWithExactly('The total is: 10')).to.be.true;
+    expect(consoleSpy.calledOnceWithExactly('The total is: 20')).to.be.true;
     expect(calculateNumberSpy.calledOnceWithExactly(10, 10, 'SUM')).to.be.true;
   });
 });
