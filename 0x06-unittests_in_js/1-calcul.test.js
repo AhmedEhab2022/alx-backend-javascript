@@ -18,17 +18,17 @@ describe('calculateNumber', () => {
   });
 
   it('Subtraction', () => {
-    assert.strictEqual(calculateNumber(1, 3, 'SUBTRACT'), -2);
-    assert.strictEqual(calculateNumber(1, 3.7, 'SUBTRACT'), -3);
-    assert.strictEqual(calculateNumber(1.2, 3.7, 'SUBTRACT'), -3);
-    assert.strictEqual(calculateNumber(1.5, 3.7, 'SUBTRACT'), -2);
-    assert.strictEqual(calculateNumber(1.4, 3.7, 'SUBTRACT'), -3);
-    assert.strictEqual(calculateNumber(0.0, 3.7, 'SUBTRACT'), -4);
-    assert.strictEqual(calculateNumber(1.4, 3.2, 'SUBTRACT'), -2);
-    assert.strictEqual(calculateNumber(1.4, 3.5, 'SUBTRACT'), -3);
-    assert.strictEqual(calculateNumber(-1.4, -3.5, 'SUBTRACT'), 2);
-    assert.strictEqual(calculateNumber(-1.4, 3.5, 'SUBTRACT'), -5);
-    assert.strictEqual(calculateNumber(1.4, -3.5, 'SUBTRACT'), 4);
+    assert.strictEqual(calculateNumber(1, 3, 'SUBTRACT'), 2);
+    assert.strictEqual(calculateNumber(1, 3.7, 'SUBTRACT'), 3);
+    assert.strictEqual(calculateNumber(1.2, 3.7, 'SUBTRACT'), 3);
+    assert.strictEqual(calculateNumber(1.5, 3.7, 'SUBTRACT'), 2);
+    assert.strictEqual(calculateNumber(1.4, 3.7, 'SUBTRACT'), 3);
+    assert.strictEqual(calculateNumber(0.0, 3.7, 'SUBTRACT'), 4);
+    assert.strictEqual(calculateNumber(1.4, 3.2, 'SUBTRACT'), 2);
+    assert.strictEqual(calculateNumber(1.4, 3.5, 'SUBTRACT'), 3);
+    assert.strictEqual(calculateNumber(-1.4, -3.5, 'SUBTRACT'), -2);
+    assert.strictEqual(calculateNumber(-1.4, 3.5, 'SUBTRACT'), 5);
+    assert.strictEqual(calculateNumber(1.4, -3.5, 'SUBTRACT'), -4);
   });
 
   it('Division', () => {
@@ -45,7 +45,7 @@ describe('calculateNumber', () => {
     assert.strictEqual(calculateNumber(1.4, -3.5, 'DIVIDE'), 1 / -3);
     assert.strictEqual(calculateNumber(0.1, 0.0, 'DIVIDE'), 'Error');
   });
-  
+
   it('Invalid type', () => {
     assert.strictEqual(calculateNumber(1, 3, 'INVALID'), 'Error');
   });

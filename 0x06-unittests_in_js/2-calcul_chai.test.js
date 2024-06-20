@@ -18,17 +18,17 @@ describe('calculateNumber', () => {
   });
 
   it('Subtraction', () => {
-    expect(calculateNumber(1, 3, 'SUBTRACT')).to.equal(-2);
-    expect(calculateNumber(1, 3.7, 'SUBTRACT')).to.equal(-3);
-    expect(calculateNumber(1.2, 3.7, 'SUBTRACT')).to.equal(-3);
-    expect(calculateNumber(1.5, 3.7, 'SUBTRACT')).to.equal(-2);
-    expect(calculateNumber(1.4, 3.7, 'SUBTRACT')).to.equal(-3);
-    expect(calculateNumber(0.0, 3.7, 'SUBTRACT')).to.equal(-4);
-    expect(calculateNumber(1.4, 3.2, 'SUBTRACT')).to.equal(-2);
-    expect(calculateNumber(1.4, 3.5, 'SUBTRACT')).to.equal(-3);
-    expect(calculateNumber(-1.4, -3.5, 'SUBTRACT')).to.equal(2);
-    expect(calculateNumber(-1.4, 3.5, 'SUBTRACT')).to.equal(-5);
-    expect(calculateNumber(1.4, -3.5, 'SUBTRACT')).to.equal(4);
+    expect(calculateNumber(1, 3, 'SUBTRACT')).to.equal(2);
+    expect(calculateNumber(1, 3.7, 'SUBTRACT')).to.equal(3);
+    expect(calculateNumber(1.2, 3.7, 'SUBTRACT')).to.equal(3);
+    expect(calculateNumber(1.5, 3.7, 'SUBTRACT')).to.equal(2);
+    expect(calculateNumber(1.4, 3.7, 'SUBTRACT')).to.equal(3);
+    expect(calculateNumber(0.0, 3.7, 'SUBTRACT')).to.equal(4);
+    expect(calculateNumber(1.4, 3.2, 'SUBTRACT')).to.equal(2);
+    expect(calculateNumber(1.4, 3.5, 'SUBTRACT')).to.equal(3);
+    expect(calculateNumber(-1.4, -3.5, 'SUBTRACT')).to.equal(-2);
+    expect(calculateNumber(-1.4, 3.5, 'SUBTRACT')).to.equal(5);
+    expect(calculateNumber(1.4, -3.5, 'SUBTRACT')).to.equal(-4);
   });
 
   it('Division', () => {
