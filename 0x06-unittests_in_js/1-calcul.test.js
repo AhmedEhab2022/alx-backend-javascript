@@ -18,6 +18,7 @@ describe('calculateNumber', () => {
   });
 
   it('Subtraction', () => {
+    // substract b from a
     assert.strictEqual(calculateNumber(1, 3, 'SUBTRACT'), 2);
     assert.strictEqual(calculateNumber(1, 3.7, 'SUBTRACT'), 3);
     assert.strictEqual(calculateNumber(1.2, 3.7, 'SUBTRACT'), 3);
