@@ -45,4 +45,8 @@ describe('calculateNumber', () => {
     expect(calculateNumber(1.4, -3.5, 'DIVIDE')).to.equal(1 / -3);
     expect(calculateNumber(0.1, 0.0, 'DIVIDE')).to.equal('Error');
   });
+
+  it('Invalid type', () => {
+    expect(calculateNumber(1, 3, 'INVALID')).to.equal('Error');
+  });
 });

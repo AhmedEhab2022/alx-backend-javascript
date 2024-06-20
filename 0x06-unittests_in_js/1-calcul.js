@@ -8,6 +8,8 @@ function calculateNumber (a, b, type) {
       return 'Error';
     }
     return Math.round(a) / Math.round(b);
+  } else {
+    return 'Error';
   }
 }
 

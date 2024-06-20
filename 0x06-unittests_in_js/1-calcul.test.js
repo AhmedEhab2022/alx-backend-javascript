@@ -45,4 +45,8 @@ describe('calculateNumber', () => {
     assert.strictEqual(calculateNumber(1.4, -3.5, 'DIVIDE'), 1 / -3);
     assert.strictEqual(calculateNumber(0.1, 0.0, 'DIVIDE'), 'Error');
   });
+  
+  it('Invalid type', () => {
+    assert.strictEqual(calculateNumber(1, 3, 'INVALID'), 'Error');
+  });
 });
