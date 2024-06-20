@@ -1,7 +1,6 @@
 const request = require('request');
 const chai = require('chai');
 const { expect } = chai;
-// import regex module
 
 describe('Index page', () => {
   const baseUrl = 'http://localhost:7865';
