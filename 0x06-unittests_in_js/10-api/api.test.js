@@ -67,7 +67,7 @@ describe('Available payment methods', () => {
 
 describe('Login page', () => {
   const baseUrl = 'http://localhost:7865/login';
-  const options = { form: { userName: 'Betty' } };
+  const options = {body: { userName: 'Betty' }, json: true};
 
   it('Correct status code?', (done) => {
     request.post(baseUrl, options, (error, response, body) => {
