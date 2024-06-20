@@ -1,17 +1,21 @@
 const request = require('request');
+const chai = require('chai');
+const { expect } = chai;
 
-descripe('GET /', () => {
-  it('should return a 200 status code', () => {
-    return request(app)
-      .get('/')
-      .expect(200)
+describe('Index page', () => {
+  const baseUrl = 'http://localhost:7865';
+
+  it('Correct status code?', (done) => {
+    request.get(baseUrl, (error, response, body) => {
+      expect(response.statusCode).to.equal(200);
+      done();
+    });
   });
 
-  it('should return a message', () => {
-    return request(app)
-      .get('/')
-      .then(response => {
-        expect(response.body.message).toBe('Welcome to the payment system');
-      });
+  it('Correct result?', (done) => {
+    request.get(baseUrl, (error, response, body) => {
+      expect(body).to.equal('Welcome to the payment system');
+      done();
+    });
   });
 });
