@@ -38,4 +38,11 @@ describe('Cart page', () => {
       done();
     });
   });
+
+  it('Invalid cart ID', (done) => {
+    request.get('http://localhost:7865/cart/hello', (error, response, body) => {
+      expect(response.statusCode).to.equal(404);
+      done();
+    });
+  });
 });
