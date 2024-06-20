@@ -1,13 +1,13 @@
 const sinon = require('sinon');
 const Utils = require('./utils');
 
-descripe('sendPaymentRequestToApi', () => {
+describe('sendPaymentRequestToApi', () => {
   let consoleSpy;
   let calculateNumberSpy;
 
   beforeEach(() => {
     consoleSpy = sinon.spy(console, 'log');
-    calculateNumberSpy = sinon.spy(Utils, 'calculateNumber');
+    calculateNumberSpy = sinon.spy(Utils.prototype, 'calculateNumber');
   });
 
   afterEach(() => {
