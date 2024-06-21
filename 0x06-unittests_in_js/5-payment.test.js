@@ -9,7 +9,7 @@ describe('sendPaymentRequestToApi', () => {
 
   beforeEach(() => {
     consoleSpy = sinon.spy(console, 'log');
-    calculateNumberSpy = sinon.spy(Utils.prototype, 'calculateNumber');
+    calculateNumberSpy = sinon.spy(Utils, 'calculateNumber');
   });
 
   afterEach(() => {
