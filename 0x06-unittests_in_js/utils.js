@@ -1,9 +1,9 @@
 class Utils {
-  calculateNumber (a, b, type) {
+  calculateNumber (type, a, b) { 
     if (type === 'SUM') {
       return Math.round(a) + Math.round(b);
     } else if (type === 'SUBTRACT') {
-      return Math.round(b) - Math.round(a);
+      return Math.round(a) - Math.round(b);
     } else if (type === 'DIVIDE') {
       if (Math.round(b) === 0) {
         return 'Error';
