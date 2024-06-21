@@ -19,13 +19,13 @@ describe('sendPaymentRequestToApi', () => {
   it('should log the total 1', () => {
     sendPaymentRequestToApi(100, 20);
     expect(consoleSpy.calledOnceWithExactly('The total is: 120')).to.be.true;
-    expect(calculateNumberSpy.calledOnceWithExactly(100, 20, 'SUM')).to.be.true;
+    expect(calculateNumberSpy.calledOnceWithExactly('SUM', 100, 20)).to.be.true;
     
   });
 
   it('should log the total 2', () => {
     sendPaymentRequestToApi(10, 10);
     expect(consoleSpy.calledOnceWithExactly('The total is: 20')).to.be.true;
-    expect(calculateNumberSpy.calledOnceWithExactly(10, 10, 'SUM')).to.be.true;
+    expect(calculateNumberSpy.calledOnceWithExactly('SUM', 10, 10)).to.be.true;
   });
 });

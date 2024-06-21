@@ -9,7 +9,7 @@ describe('sendPaymentRequestToApi', () => {
     const calculateNumberSpy = sinon.spy(Utils.prototype, 'calculateNumber');
     sendPaymentRequestToApi(100, 20);
     expect(consoleSpy.calledOnceWithExactly('The total is: 120')).to.be.true;
-    expect(calculateNumberSpy.calledOnceWithExactly(100, 20, 'SUM')).to.be.true;
+    expect(calculateNumberSpy.calledOnceWithExactly('SUM', 100, 20)).to.be.true;
     consoleSpy.restore();
     calculateNumberSpy.restore();
   });
